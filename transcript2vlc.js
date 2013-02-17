@@ -74,9 +74,8 @@
       });
       //window.URL = window.webkitURL || window.URL;
       //console.log(output.join('\n'));
-      location.href = "data:application/octet-stream" +
+      location.href = "data:application/octet-stream;charset=utf-8," +
         encodeURIComponent( output.join('\n') );
-
 		})();
 	}
 
