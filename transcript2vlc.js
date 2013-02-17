@@ -9,7 +9,7 @@
 			if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
 				done = true;
 				initMyBookmarklet();
-			} 
+			}
 		};
 		document.getElementsByTagName("head")[0].appendChild(script);
 	} else {
@@ -73,8 +73,8 @@
         });
       });
       //window.URL = window.webkitURL || window.URL;
-      console.log(output.join('\n'));
-      location.href = "data:application/octet-stream" + 
+      //console.log(output.join('\n'));
+      location.href = "data:application/octet-stream" +
         encodeURIComponent( output.join('\n') );
 
 		})();
