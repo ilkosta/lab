@@ -28,9 +28,9 @@
         jQuery(this).find(':nth-child(1)').each( function() {
           jQuery(this).find('a.toggle').each( function() {
             var lesson_name = jQuery(this).text().trim();
-            output.append('-'.repeat(lesson_name.length) );
-            output.append( lesson_name );
-            output.append('');
+            output.push('-'.repeat(lesson_name.length) );
+            output.push( lesson_name );
+            output.push('');
           });
 
           var counter = 0;
@@ -61,9 +61,9 @@
               // if( end_time_seconds && end_time_minutes ) {
                 var end_time_string   = '00:' + end_time_minutes_s + ':' + end_time_seconds_s + ',990';
 
-                output.append( counter );
-                output.append( start_t + ' --> ' + end_time_string );
-                output.append( phrase );
+                output.push( counter );
+                output.push( start_t + ' --> ' + end_time_string );
+                output.push( phrase );
               // }
             }
             start_t = '00:' + row_t + ',000';
