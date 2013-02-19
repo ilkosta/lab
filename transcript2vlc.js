@@ -4,8 +4,8 @@
   if (window.jQuery === undefined || window.jQuery.fn.jquery < v) {
     var done = false;
     var script = document.createElement("script");
-    //script.src = "http://ajax.googleapis.com/ajax/libs/jquery/" + v + "/jquery.min.js";
-    script.src = "http://localhost:8000/static/jquery.min.js";
+    script.src = "http://ajax.googleapis.com/ajax/libs/jquery/" + v + "/jquery.min.js";
+    //script.src = "http://localhost:8000/static/jquery.min.js";
     script.onload = script.onreadystatechange = function() {
       if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
         done = true;
@@ -91,9 +91,9 @@
 
       }); // each lesson
       //window.URL = window.webkitURL || window.URL;
-      console.log(output.join('\n'));
-      //location.href = "data:application/octet-stream" +
-      //  encodeURIComponent( output.join('\n') );
+      //console.log(output.join('\n'));
+      location.href = "data:application/octet-stream" +
+        encodeURIComponent( output.join('\n') );
 
     })();
   }
