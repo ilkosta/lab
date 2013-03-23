@@ -38,7 +38,8 @@
 
     function fill(n) { return (n<10) ? ('0' + n) : n; }
     var s = '';
-    return  fill(time.getMinutes()) +
+    return  fill(time.getHours  ()) +
+      ':' + fill(time.getMinutes()) +
       ':' + fill(time.getSeconds()) +
       ',' + time.getMilliseconds();
   }
@@ -80,7 +81,7 @@
             current_phrase = jQuery(this).find(':nth-child(2)').text().trim();
 
             if(start_t != null) {
-              end_time  = new Date(toDate(row_t) - 900);
+              end_time  = new Date(toDate(row_t) - 200);
               printPhrase( counter, start_t, toVlcTime(end_time), phrase);
             }
             start_t   = '00:' + row_t + ',000';
